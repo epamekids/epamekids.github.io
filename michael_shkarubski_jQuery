@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <div><p id = "hide">Этот текст медленно исчезнет по нажатию кнопки снизу</p><div>
+
+
+  <button type = "button" onclick = "$('#hide').fadeOut(500)">Click Me!</button>
+
+
+</body>
+</html>
