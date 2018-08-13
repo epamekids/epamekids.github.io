@@ -12,7 +12,7 @@
   function getFile() {
   
     var xmlFileGet = new XMLHttpRequest();
-	xmlFileGet.open('GET',"https://epamekids.github.io/README.md", true);
+	xmlFileGet.open('GET',"https://epamekids.github.io/README.md", false);
 	xmlFileGet.send();
 	alert( xmlFileGet.responseText );
 	if (xmlFileGet.status != 200) {
