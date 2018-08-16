@@ -8,13 +8,13 @@
 <body>
 
   <button onclick="Text()" id="button">Загрузить Text</button>
-
+  <script> type=text/javascript src="https://code.jquery.com/jquery-3.3.1.min.js"</script>
   <script>
     function Text() {
 
       var xmlFileGet = new XMLHttpRequest();
 
-      xmlFileGet.open('GET', 'https://github.com/epamekids/epamekids.github.io/blob/master/README.md', false);
+      xmlFileGet.open('GET', 'https://epamekids.github.io/README.md', false);
 
 
       xmlFileGet.send();
