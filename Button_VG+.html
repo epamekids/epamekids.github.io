@@ -12,25 +12,25 @@
   <script>
     function Text() {
 
-      var xhr = new XMLHttpRequest();
+      var xmlFileGet = new XMLHttpRequest();
 
-      xhr.open('GET', 'https://github.com/epamekids/epamekids.github.io/blob/master/README.md', false);
-
-
-      xhr.send();
+      xmlFileGet.open('GET', 'https://github.com/epamekids/epamekids.github.io/blob/master/README.md', false);
 
 
-      xhr.onreadystatechange = function() {
-        if (xhr.readyState != 4) return;
+      xmlFileGet.send();
+
+
+      xmlFileGet.onreadystatechange = function() {
+        if (xmlFileGet.readyState != 4) return;
 
         button.innerHTML = 'Готово!';
 
-        if (xhr.status != 200) {
+        if (xmlFileGet.status != 200) {
           // обработать ошибку
-          alert(xhr.status + ': ' + xhr.statusText);
+          alert(xmlFileGet.status + ': ' + xmlFileGet.statusText);
         } else {
           // вывести результат
-          alert(xhr.responseText);
+          alert(xmlFileGet.responseText);
         }
 
       }
@@ -43,3 +43,4 @@
 </body>
 
 </html>
+
