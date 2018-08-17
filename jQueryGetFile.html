@@ -12,7 +12,7 @@
 
    function getFile() {
       $.get("https://epamekids.github.io/README.md", function(data) {
-  	    $("#text").innerHTML(data);
+  	    $("#text").innerHTML($("#text").html(data));
       });
     }
 
