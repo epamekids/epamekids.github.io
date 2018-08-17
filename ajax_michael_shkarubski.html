@@ -9,26 +9,22 @@
 <body>
 
   <script>
-	  
-    function getFile() {
+    function Text() {
       button.innerHTML = 'Загружаю...';
       var xmlFileGet = new XMLHttpRequest();
       xmlFileGet.open('GET', 'https://epamekids.github.io/README.md', false);
       xmlFileGet.send();
       if (xmlFileGet.status != 200) {
-        $('#text')( xmlFileGet.status + ': ' + xmlFileGet.statusText );
+        alert( xmlFileGet.status + ': ' + xmlFileGet.statusText );
       }
       else {
-        $('#text').html(xmlFileGet.responseText);
+      button.innerHTML = 'Готово!';
+      $('#text').html(xmlFileGet.responseText);
     }
       }
-	  
   </script>
-	
   <div id="text">
-	  
-    <button onclick = "getFile()" id = "button">For Printing Text</button>
-	  
+  <button onclick="Text()" id="button">Загрузить Text!</button>
   </div>
 
 </body>
