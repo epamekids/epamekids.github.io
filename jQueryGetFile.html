@@ -10,14 +10,15 @@
   <script>
 
    function getFile() {
-      $.get("https://epamekids.github.io", function(data) {
-  	    $(".result").html(data);
+      $.get("https://epamekids.github.io/README.md", function(data) {
+  	    $("#result").html(data);
       });
     }
 
   </script>
     
-  <button type = "button" onclick = 'getFile()'>Get Information</button>  
+    <p id = "text"></p>  
+    <button type = "button" onclick = 'getFile()'>Get Information</button>  
 
 </body>
 </html>
