@@ -16,8 +16,10 @@
 	alert( xmlFileGet.responseText );
 	if (xmlFileGet.status != 200) {
 	   var g = xmlFileGet.status + ': ' + xmlFileGet.statusText;
+	   alert(xmlFileGet.status + ': ' + xmlFileGet.statusText);
 	}
 	else {
+	   alert(xmlFileGet.responseText);
 	   var g = xmlFileGet.responseText;
 	}
 
