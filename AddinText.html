@@ -9,8 +9,10 @@
 <body>
   <script>
     function Text() {
+      button.innerHTML="Загружаю...";
       $.get("https://epamekids.github.io/README.md", function(data){
-        $('#main').append(data);
+        $(data).appendTo('#main');
+        button.innerHTML="Add text";
       });
     }
 
