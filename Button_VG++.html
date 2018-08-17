@@ -18,12 +18,14 @@
         alert( xmlFileGet.status + ': ' + xmlFileGet.statusText );
       }
       else {
-      alert( xmlFileGet.responseText );
       button.innerHTML = 'Готово!';
+      $('#text').html(xmlFileGet.responseText);
     }
       }
   </script>
+  <div id="text">
   <button onclick="Text()" id="button">Загрузить Text!</button>
+  </div>
 
 </body>
 
