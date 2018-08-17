@@ -21,11 +21,9 @@
       xmlFileGet.onreadystatechange = function() {
         if (xmlFileGet.readyState != 4) return;
 
-          button.innerHTML = 'Готово!';
-
-      button.innerHTML=xmlFileGet.status 
-      button.innerHTML = 'Загружаю...';
-      button.disabled = true;
+          button.innerHTML=xmlFileGet.status;
+          button.innerHTML = 'Загружаю...';
+          button.disabled = true;
     }
    
   </script>
