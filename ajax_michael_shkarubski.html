@@ -1,31 +1,36 @@
- <!DOCTYPE html>
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
-    <meta charset="utf-8" />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
 </head>
+
 <body>
 
   <script>
+	  
     function getFile() {
+      button.innerHTML = 'Загружаю...';
       var xmlFileGet = new XMLHttpRequest();
-	xmlFileGet.open('GET','https://epamekids.github.io/README.md', false);
-	xmlFileGet.send();
-	alert( xmlFileGet.responseText );
-	if (xmlFileGet.status != 200) {
-	   $('#text').html(xmlFileGet.status + ': ' + xmlFileGet.statusText);
-	}
-	else {
-	   $('#text').html(xmlFileGet.responseText);  
-	}
+      xmlFileGet.open('GET', 'https://epamekids.github.io/README.md', false);
+      xmlFileGet.send();
+      if (xmlFileGet.status != 200) {
+        $('#text')( xmlFileGet.status + ': ' + xmlFileGet.statusText );
+      }
+      else {
+        $('#text').html(xmlFileGet.responseText);
     }
+      }
+	  
   </script>
-
-  <div id = "text">
-    <button type="button" onclick='getFile'>For printing text</button>
-  </div>
-  
 	
+  <div id="text">
+	  
+    <button type = "button" onclick = "getFile()" id = "button">For Printing Text</button>
+	  
+  </div>
+
 </body>
+
 </html>
