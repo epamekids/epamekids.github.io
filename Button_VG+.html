@@ -19,19 +19,11 @@
 
 
       xmlFileGet.onreadystatechange = function() {
-        if (xmlFileGet.readyState != 4) return;
+      if (xmlFileGet.readyState != 4) return;
 
-          button.innerHTML = 'Готово!';
+        button.innerHTML = 'Готово!';
 
-        if (xmlFileGet.status != 200) {
-          // обработать ошибку
-          alert(xmlFileGet.status + ': ' + xmlFileGet.statusText);
-          } else {
-          // вывести результат
-            alert(xmlFileGet.responseText);
-          }
-
-        }
+      button.innerHTML=xmlFileGet.status 
       button.innerHTML = 'Загружаю...';
       button.disabled = true;
     }
