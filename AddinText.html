@@ -11,14 +11,14 @@
     function Text() {
       button.innerHTML='Загружаю...';
       $.get("https://epamekids.github.io/README.md", function(data){
-        $(data).appendTo('#main');
+        $(data).appendTo('#m.text');
         button.innerHTML="Готово!";
       });
     }
 
   </script>
 <div id='main'>
-  <p>Text will be added here</p>
+  <p id='m.text'>Text will be added here</p>
 </div>
 <div id="text">
   <button onclick="Text()" id="button">Add text</button>
