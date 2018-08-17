@@ -7,13 +7,11 @@
 </head>
 <body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
-   
-   <p id = "text">...</p>
 
   <script>
  
     var xmlFileGet = new XMLHttpRequest();
-	xmlFileGet.open('GET',"https://epamekids.github.io/README.md", true);
+	xmlFileGet.open('GET',"epamekids.github.io/README.md", true);
 	xmlFileGet.send();
 	alert( xmlFileGet.responseText );
 	if (xmlFileGet.status != 200) {
@@ -25,7 +23,9 @@
 
   </script>
 
-  <button type="button" onclick='document.getElementById("text").innerHTML = g'>For printing text</button>
+  <button type="button" onclick='document.getElementById("text").text(xmlFileGet.responseText)'>For printing text</button>
 
+  <p id = "text"></p>	
+	
 </body>
 </html>
