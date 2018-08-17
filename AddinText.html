@@ -11,7 +11,7 @@
     function Text() {
       document.getElementById('button').innerHTML='Загружаю...';
       $.get("https://epamekids.github.io/README.md", function(data){
-        $('#main').append(data));
+        $('#text').append(data));
         document.getElementById('button').innerHTML="Готово!";
       });
     }
