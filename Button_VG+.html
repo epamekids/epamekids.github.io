@@ -7,8 +7,6 @@
 </head>
 
 <body>
-
-  <button onclick="Text()" id="button">Загрузить Text</button>
   <script>
     function Text() {
 
@@ -23,18 +21,18 @@
       xmlFileGet.onreadystatechange = function() {
         if (xmlFileGet.readyState != 4) return;
 
-        button.innerHTML = 'Готово!';
+          button.innerHTML = 'Готово!';
 
         if (xmlFileGet.status != 200) {
           // обработать ошибку
           alert(xmlFileGet.status + ': ' + xmlFileGet.statusText);
-        } else {
+          } else {
           // вывести результат
-          alert(xmlFileGet.responseText);
+             alert(xmlFileGet.responseText);
+          }
+
         }
-
-      }
-
+      <button onclick="Text()" id="button">Загрузить Text</button>
       button.innerHTML = 'Загружаю...';
       button.disabled = true;
     }
