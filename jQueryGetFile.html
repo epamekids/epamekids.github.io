@@ -9,13 +9,11 @@
 <body>
 
   <script>
-
    function getFile() {
-      $.get("https://epamekids.github.io/README.md", function(data) {
-  	    $("#text").html(data));
+      $.get("ajax_1.txt", function(data) {
+  	    $("#text").append(data));
       });
     }
-
   </script>
     
 <div id = "text">  
