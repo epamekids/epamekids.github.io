@@ -12,7 +12,7 @@
       button.innerHTML="Загружаю...";
       $.get("https://epamekids.github.io/README.md", function(data){
         $(data).appendTo('#main');
-        button.innerHTML="Add text";
+        setTimeout('button.innerHTML="Add text"', 2000);
       });
     }
 
