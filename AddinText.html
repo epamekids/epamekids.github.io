@@ -9,15 +9,21 @@
 <body>
   <script>
     function Text() {
-      $('#text').css('diplay',"none");
-      $.get("https://epamekids.github.io/README.md", function(data){
+      $('#text').css('display',"none");
+      $('#gifka').css("display", "block");
+      $.get("https://epamekids.github.io/README.md", function(data)
         $("gghkll").appendTo('#main');
+        $('#gifka").css("display","none");
+        $('#text').css('display','block');
       });
-    }
+    #https://github.com/epamekids/epamekids.github.io/commit/1f6969024c9363674e88e46b946af25aebf11ab2#diff-b95f899cf42b6a9472e11ab7f8c64f89
 
   </script>
 <div id='main'>
   <p id='m.text'>Text will be added here</p>
+</div>
+<div id="gifka">
+  <img src="https://epamekids.github.io/ajax-loader.gif" style="display: none;">
 </div>
 <div id="text">
   <button onclick="Text()" id="button">Add text</button>
