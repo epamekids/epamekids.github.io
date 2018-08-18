@@ -9,10 +9,9 @@
 <body>
   <script>
     function Text() {
-      button.innerHTML="Загружаю...";
+      $('#text').css('diplay',"none");
       $.get("https://epamekids.github.io/README.md", function(data){
         $("gghkll").appendTo('#main');
-        setTimeout('button.innerHTML="Add text"', 2000);
       });
     }
 
