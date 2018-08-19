@@ -12,13 +12,11 @@
       $("#text").css("display","none");
       $("#gifka").css("display", "block");
       $.get("https://epamekids.github.io/README.md", function(data){
-        $("#main").append(data);
+        setTimeout("$('#main').append(data)", 4000);
+        $('#main').append(data);
         $("#gifka").css("display","none");
-        $("#text").css('display',"block");
-        setTimeout("alert('Прошла 1 секунда')", 1000);
-
+        $("#text").css("display","block"); 
       });
-    }
   </script>
 <div id="main">
   <p id="m.text">Text will be added here</p>
