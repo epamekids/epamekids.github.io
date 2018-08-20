@@ -12,8 +12,7 @@
       $("#text").css("display","none");
       $("#gifka").css("display", "block");
       $.get("https://epamekids.github.io/README.md", function(data){
-                  .delay(4000);
-        $('#main').append(data);
+        $('#main').delay(4000).append(data);
         $("#gifka").css("display","none");
         $("#text").css("display","block"); 
       });
