@@ -11,12 +11,12 @@
     function Text() {
       $("#text").css("display","none");
       $("#gif").css("display", "block");
-      setTimeout(' $.get("https://epamekids.github.io/README.md", function(data){
-        $('#main').append(data)
-        $("#gif").css("display","none");
-        $("#text").css("display","block"); 
-      });
-    } ', 4000);
+      setTimeout(' $.get("https://epamekids.github.io/README.md", function(data) {
+                        $('#main').append(data);
+                        $("#gif").css("display","none");
+                        $("#text").css("display","block"); 
+                          })', 4000);
+    }
   </script>
 <div id="main">
   <p id="m.text">Text will be added here</p>
