@@ -1,0 +1,30 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+  <meta charset="utf-8">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+</head>
+
+<body>
+  <script>
+    function Text() {
+      $("#text").css("display","none");
+      $("#gif").css("display", "block");
+      $.get("https://epamekids.github.io/README.md", function(data){
+        $('#main').delay(4000).append(data);
+        //$("#gif").css("display","none");
+        $("#text").css("display","block"); 
+      });
+    }
+  </script>
+<div id="main">
+  <p id="m.text">Text will be added here</p>
+</div>
+<img id="gif" src="https://epamekids.github.io/ajax-loader.gif" style="display: none;">
+<div id="text">
+  <button onclick="Text()" id="button">Add text</button>
+</div>
+</body>
+
+</html> 
