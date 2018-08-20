@@ -12,8 +12,8 @@
       $("#text").css("display","none");
       $("#gif").css("display", "block");
       $.get("https://epamekids.github.io/README.md", function(data){
-        $('#main').delay(4000).append(data);
-        //$("#gif").css("display","none");
+        setTimeout("$('#main').append(data)", 4000);
+        $("#gif").css("display","none");
         $("#text").css("display","block"); 
       });
     }
@@ -23,7 +23,7 @@
 </div>
 <img id="gif" src="https://epamekids.github.io/ajax-loader.gif" style="display: none;">
 <div id="text">
-  <button onclick="Text()" id="button">Add text</button>
+  <button onclick="Text()" id="button">Add text.</button>
 </div>
 </body>
 
