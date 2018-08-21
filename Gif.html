@@ -11,11 +11,11 @@
     function Text() {
       $("#text").css("display","none");
       $("#gif").css("display", "block");
-      setTimeout(' $.get("https://epamekids.github.io/README.md", function(data) {
-                        $('#main').append(data);
-                        $("#gif").css("display","none");
-                        $("#text").css("display","block"); 
-                          })', 4000);
+      $.get("https://epamekids.github.io/README.md", function(data) {
+                    $('#main').append(data);
+                    $("#gif").css("display","none");
+                    $("#text").css("display","block"); 
+         })
     }
   </script>
 <div id="main">
@@ -23,7 +23,7 @@
 </div>
 <img id="gif" src="https://epamekids.github.io/ajax-loader.gif" style="display: none;">
 <div id="text">
-  <button onclick="Text()" id="button">Add text.</button>
+  <button onclick="Text()" id="button">Add text</button>
 </div>
 </body>
 
