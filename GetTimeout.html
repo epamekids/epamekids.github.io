@@ -10,10 +10,12 @@
   <script>
   
       function getFile() {
-
+	      
+        x = 1;
         $.get("https:\\epamekids.github.io/README.md", function(data) {
           while (true) {
-	         setTimeout($("#file").append(data), 10000);
+	         setTimeout($("#file").append(data,x), 10000);
+		 x++;
         }
     });
 
